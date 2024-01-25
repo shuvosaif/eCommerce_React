@@ -18,14 +18,11 @@ export default function Account() {
           </div>
         </div>
         <div className='mt-6 bg-white text-gray-600 shadow rounded p-4 divide-y divide-gray-200 space-y-4'>
-          <div className='space-y-1 pl-8'>
-            <a
-              href='#'
-              className='relative block font-medium capitalize transition'
-            >
-              <span className='absolute left-8 top-0 text-base'>
-                <i className='fas fa-address-card text-primary'></i>{' '}
-              </span>
+          <div className='space-y-1 pl-8 relative '>
+            <span className='absolute left-0 top-0 text-base'>
+              <i className='fas fa-address-card text-primary'></i>{' '}
+            </span>
+            <a href='#' className=' block font-medium capitalize transition'>
               Manage account
             </a>
             <a
@@ -47,60 +44,39 @@ export default function Account() {
               Change Password
             </a>
           </div>
-          <div className='space-y-1 pl-4'>
-            <a
-              href='#'
-              className='relative block font-medium capitalize transition'
-            >
-              <span className='absolute left-8 top-0 text-base'>
-                <i className='far fa-address-card'></i>
-              </span>
+          <div className='space-y-1 pl-8 relative'>
+            <span className='absolute left-0 top-0 text-base'>
+              <i className='far fa-address-card text-primary'></i>
+            </span>
+            <a href='#' className=' block font-medium capitalize transition'>
               Manage account
             </a>
-            <a
-              href='#'
-              className='relative block font-medium capitalize transition'
-            >
+            <a href='#' className=' block font-medium capitalize transition'>
               Profile Info
             </a>
-            <a
-              href='#'
-              className='relative block font-medium capitalize transition'
-            >
+            <a href='#' className=' block font-medium capitalize transition'>
               Manage address
             </a>
-            <a
-              href='#'
-              className='relative block font-medium capitalize transition'
-            >
+            <a href='#' className=' block font-medium capitalize transition'>
               Change Password
             </a>
           </div>
-          <div className='space-y-1 pl-8'>
-            <a
-              href='#'
-              className='relative block font-medium capitalize transition'
-            >
-              <span className='absolute left-8 top-0 text-base'>
-                <i className='far fa-address-card'></i>
-              </span>
+          <div className='space-y-1 pl-8 relative'>
+            <span className='absolute left-0 top-0 text-base'>
+              <i className='far fa-address-card text-primary'></i>
+            </span>
+            <a href='#' className=' block font-medium capitalize transition'>
               Manage account
             </a>
-            <a
-              href='#'
-              className='relative block font-medium capitalize transition'
-            >
+            <a href='#' className=' block font-medium capitalize transition'>
               Profile Info
             </a>
           </div>
-          <div className='space-y-1 pl-8'>
-            <a
-              href='#'
-              className='relative block font-medium capitalize transition'
-            >
-              <span className='absolute left-8 top-0 text-base'>
-                <i className='far fa-address-card'></i>
-              </span>
+          <div className='space-y-1 pl-8 relative'>
+            <span className='absolute left-0 top-0 text-base'>
+              <i className='far fa-address-card text-primary'></i>
+            </span>
+            <a href='#' className=' block font-medium capitalize transition'>
               Logout
             </a>
           </div>

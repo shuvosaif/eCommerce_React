@@ -17,14 +17,14 @@ export default function Accountwrapper() {
           </div>
         </div>
         <div className='mt-6 bg-white shadow rounded p-4 divide-y divide-gray-200 space-y-4 text-gray-600'>
-          <div className='space-y-1 pl-8'>
+          <div className='space-y-1 pl-8 relative'>
+            <span className='absolute top-0 left-0 text-base'>
+              <i className='far fa-address-card'></i>
+            </span>
             <a
               href='#'
-              className='relative text-primary block font-medium capitalize transition'
+              className=' text-primary block font-medium capitalize transition'
             >
-              <span className='absolute top-0 text-base'>
-                <i className='far fa-address-card'></i>
-              </span>
               Manage account
             </a>
             <a
@@ -46,14 +46,14 @@ export default function Accountwrapper() {
               Change Password
             </a>
           </div>
-          <div className='space-y-1 pl-4'>
+          <div className='space-y-1 pl-8 relative '>
+            <span className='absolute left-0 top-0 text-base'>
+              <i className='far fa-address-card'></i>
+            </span>
             <a
               href='#'
-              className='relative text-primary block font-medium capitalize transition'
+              className=' text-primary block font-medium capitalize transition'
             >
-              <span className='absolute left-8 top-0 text-base'>
-                <i className='far fa-address-card'></i>
-              </span>
               Manage account
             </a>
             <a
@@ -75,14 +75,14 @@ export default function Accountwrapper() {
               Change Password
             </a>
           </div>
-          <div className='space-y-1 pl-8'>
+          <div className='space-y-1 pl-8 relative'>
+            <span className='absolute left-0 top-0 text-base'>
+              <i className='far fa-address-card'></i>
+            </span>
             <a
               href='#'
-              className='relative text-primary block font-medium capitalize transition'
+              className=' text-primary block font-medium capitalize transition'
             >
-              <span className='absolute left-8 top-0 text-base'>
-                <i className='far fa-address-card'></i>
-              </span>
               Manage account
             </a>
             <a
@@ -92,14 +92,14 @@ export default function Accountwrapper() {
               Profile Info
             </a>
           </div>
-          <div className='space-y-1 pl-8'>
+          <div className='space-y-1 pl-8 relative'>
+            <span className='absolute left-0 top-0 text-base'>
+              <i className='far fa-address-card'></i>
+            </span>
             <a
               href='#'
-              className='relative text-primary block font-medium capitalize transition'
+              className=' text-primary block font-medium capitalize transition'
             >
-              <span className='absolute left-8 top-0 text-base'>
-                <i className='far fa-address-card'></i>
-              </span>
               Logout
             </a>
           </div>

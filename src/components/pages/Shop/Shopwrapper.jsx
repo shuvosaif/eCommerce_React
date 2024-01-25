@@ -1,8 +1,21 @@
+import { useEffect, useState } from 'react'
 import chair from '../../../assets/images/office-chair.jpg'
+import Data from '../../../../Products'
 
 export default function Shopwrapper() {
+  const [brand, setBrand] = useState([])
+  const [categories, setCategories] = useState([])
+  const [products, setProducts] = useState([])
+
+  useEffect(() => {
+    setProducts(Data)
+    setCategories(...new Set(products.map((p) => p.category)))
+    setBrand(...new Set(products.map((p) => p.brand)))
+  }, [])
+
   return (
     <div className='container grid grid-cols-4 gap-6 pt-4 pb-16 items-start'>
+      {/* Sidebar */}
       <div className='col-span-1 bg-white px-4 pb-6 shadow rounded overflow-hidden'>
         <div className='divide-y divide-gray-200 space-y-5'>
           <div>
@@ -10,50 +23,19 @@ export default function Shopwrapper() {
               Categories
             </h3>
             <div className='space-y-2'>
-              <div className='flex items-center'>
-                <input
-                  type='checkbox'
-                  id='cat-1'
-                  className='text-primary focus:ring-0 rounded-sm cursor-pointer'
-                />
-                <label className='text-gray-600 ml-3 cursor-pointer'>
-                  Bedroom
-                </label>
-                <div className='ml-auto text-gray-600 text-sm'>(15)</div>
-              </div>
-              <div className='flex items-center'>
-                <input
-                  type='checkbox'
-                  id='cat-1'
-                  className='text-primary focus:ring-0 rounded-sm cursor-pointer'
-                />
-                <label className='text-gray-600 ml-3 cursor-pointer'>
-                  Sofa
-                </label>
-                <div className='ml-auto text-gray-600 text-sm'>(15)</div>
-              </div>
-              <div className='flex items-center'>
-                <input
-                  type='checkbox'
-                  id='cat-1'
-                  className='text-primary focus:ring-0 rounded-sm cursor-pointer'
-                />
-                <label className='text-gray-600 ml-3 cursor-pointer'>
-                  Office
-                </label>
-                <div className='ml-auto text-gray-600 text-sm'>(15)</div>
-              </div>
-              <div className='flex items-center'>
-                <input
-                  type='checkbox'
-                  id='cat-1'
-                  className='text-primary focus:ring-0 rounded-sm cursor-pointer'
-                />
-                <label className='text-gray-600 ml-3 cursor-pointer'>
-                  Outdoor
-                </label>
-                <div className='ml-auto text-gray-600 text-sm'>(15)</div>
-              </div>
+              {categories.map((b) => (
+                <div className='flex items-center'>
+                  <input
+                    type='checkbox'
+                    id='cat-1'
+                    className='text-primary focus:ring-0 rounded-sm cursor-pointer'
+                  />
+                  <label className='text-gray-600 ml-3 cursor-pointer'>
+                    {b}
+                  </label>
+                  <div className='ml-auto text-gray-600 text-sm'>({b})</div>
+                </div>
+              ))}
             </div>
           </div>
           <div className='pt-4'>
@@ -232,6 +214,7 @@ export default function Shopwrapper() {
           </div>
         </div>
       </div>
+      {/* Main Section */}
       <div className='col-span-3'>
         <div className='div flex items-center mb-4'>
           <select className='w-44 text-sm text-gray-600 px-4 py-3 border-gray-300 shadow-sm rounded focus:ring-primary focus:border-primary'>
@@ -242,10 +225,10 @@ export default function Shopwrapper() {
           </select>
 
           <div className='flex gap-2 ml-auto'>
-            <div className='border border-primary w-10 h-9 flex items-center justify- text-white bg-primary rounded cursor-pointer'>
+            <div className='border border-primary w-10 h-9 flex justify-center items-center justify- text-white bg-primary rounded cursor-pointer'>
               <i className='fas fa-th'></i>
             </div>
-            <div className='border border-gray-300 w-10 h-9 flex items-center justify- text-gray-600 rounded cursor-pointer'>
+            <div className='border border-gray-300 w-10 h-9 flex justify-center items-center justify- text-gray-600 rounded cursor-pointer'>
               <i className='fas fa-list'></i>
             </div>
           </div>
@@ -253,7 +236,7 @@ export default function Shopwrapper() {
         <div className='grid grid-cols-3 gap-6'>
           <div className='bg-white shadow rounded overflow-hidden'>
             <div className='relative'>
-              <img src={chair} className='w-full' />
+              <img src={chair} className='w-full h-96' />
               <div className='absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2'>
                 <a
                   href='#'
@@ -309,7 +292,7 @@ export default function Shopwrapper() {
           </div>
           <div className='bg-white shadow rounded overflow-hidden'>
             <div className='relative'>
-              <img src={chair} className='w-full' />
+              <img src={chair} className='w-full h-96' />
               <div className='absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2'>
                 <a
                   href='#'
@@ -365,7 +348,7 @@ export default function Shopwrapper() {
           </div>
           <div className='bg-white shadow rounded overflow-hidden'>
             <div className='relative'>
-              <img src={chair} className='w-full' />
+              <img src={chair} className='w-full h-96' />
               <div className='absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2'>
                 <a
                   href='#'
@@ -421,7 +404,7 @@ export default function Shopwrapper() {
           </div>
           <div className='bg-white shadow rounded overflow-hidden'>
             <div className='relative'>
-              <img src={chair} className='w-full' />
+              <img src={chair} className='w-full h-96' />
               <div className='absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2'>
                 <a
                   href='#'
@@ -477,7 +460,7 @@ export default function Shopwrapper() {
           </div>
           <div className='bg-white shadow rounded overflow-hidden'>
             <div className='relative'>
-              <img src={chair} className='w-full' />
+              <img src={chair} className='w-full h-96' />
               <div className='absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2'>
                 <a
                   href='#'
@@ -533,7 +516,7 @@ export default function Shopwrapper() {
           </div>
           <div className='bg-white shadow rounded overflow-hidden'>
             <div className='relative'>
-              <img src={chair} className='w-full' />
+              <img src={chair} className='w-full h-96' />
               <div className='absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2'>
                 <a
                   href='#'

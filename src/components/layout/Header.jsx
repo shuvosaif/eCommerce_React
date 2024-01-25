@@ -34,7 +34,7 @@ export default function Header() {
             </div>
             <div className='text-xs leading-3'>Wish List</div>
             <span className='absolute right-0 top-1 w-5 rounded-full flex items-center justify-center bg-primary text-white text-xs'>
-              3
+              2
             </span>
           </Link>
           <a
@@ -42,11 +42,11 @@ export default function Header() {
             className='text-center text-gray-700 hover:text-primary transition duration-100 relative'
           >
             <div className='text-2xl'>
-              <i className='far fa-shopping-bag'></i>
+              <i className='fa-solid fa-cart-shopping'></i>
             </div>
             <div className='text-xs leading-3'>Cart</div>
             <span className='absolute right-3 top-1 w-5 rounded-full flex items-center justify-center bg-primary text-white text-xs'>
-              3
+              2
             </span>
           </a>
           <Link
